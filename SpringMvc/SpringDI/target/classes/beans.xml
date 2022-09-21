@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean class="com.emp" id="emp1" scope="singleton"></bean>
+
+<bean class="com.emp" id="emp2" scope="prototype"></bean>
+
+<bean class="com.emp" id="emp3">
+	<constructor-arg value="1"></constructor-arg>
+	<constructor-arg value="Ravi"></constructor-arg>
+	<constructor-arg value="12000"></constructor-arg>
+</bean>
+<bean class="com.emp" id="emp4">
+	<constructor-arg value="5"></constructor-arg>
+	<constructor-arg value="Ralvi"></constructor-arg>
+	<constructor-arg value="18000"></constructor-arg>
+</bean>
+
+<bean class="com.address" id="g1">
+        <property name="city" value="ban"></property>
+         <property name="state" value="kii"></property>
+         <property name="pno" value="8"></property>
+</bean>
+<bean class="com.emp" id="emp7">
+        <property name="id" value="2=0"></property>
+         <property name="name" value="kojghi"></property>
+        <property name="salary" value="554500"></property>
+          <property name="g" ref="g1"></property>
+</bean>
+<bean class="com.emp" id="emp8" autowire="byType" >
+          <property name="id" value="39"></property>
+         <property name="name" value="kimci"></property>
+        <property name="salary" value="808800"></property>
+          
+</bean>
+</beans>
